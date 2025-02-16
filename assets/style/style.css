@@ -1,8 +1,10 @@
 /* Start Header */
-body {
-  background-color: #15182c;
-}
 .header {
+  position: absolute;
+  z-index: 10000;
+  left: 0;
+  top: 0;
+  width: 100%;
   .container {
     min-height: 97.09px;
     display: flex;
@@ -89,3 +91,94 @@ body {
   }
 }
 /* End Header */
+
+/* Start Landing */
+.landing {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  background-color: #15182c;
+  background-image: url("../img/landing.jpg");
+  background-size: cover;
+  background-attachment: fixed;
+  .overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #00000089;
+    left: 0;
+    top: 0;
+  }
+  .content {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    width: 50%;
+    display: flex;
+    justify-content: flex-end;
+    background-color: var(--main-color-overlay);
+    color: white;
+    padding: 40px;
+    .text {
+      width: 500px;
+      max-width: 100%;
+      h1 {
+        font-weight: 500;
+      }
+      p {
+        line-height: 1.6;
+        font-size: 14px;
+        font-weight: 300;
+      }
+    }
+  }
+  @media only screen and (max-width: 991px) {
+    .content {
+      width: 100%;
+      justify-content: center;
+      h1 {
+        font-size: 24px;
+      }
+    }
+  }
+  @media only screen and (min-width: 768px) {
+    .left,
+    .right {
+      color: white;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      &.left {
+        left: 15px;
+      }
+      &.right {
+        right: 15px;
+      }
+    }
+  }
+  ul {
+    width: 60px;
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    bottom: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+    li {
+      width: 15px;
+      height: 15px;
+      border-radius: 50%;
+      background-color: white;
+      cursor: pointer;
+      transition: var(--main-transition);
+      outline: 2px solid transparent;
+    }
+    li.active,
+    li:hover {
+      background-color: var(--main-color);
+      outline: 2px solid white;
+    }
+  }
+}
+/* End Landing */
