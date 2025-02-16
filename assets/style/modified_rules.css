@@ -1,6 +1,7 @@
 /* Start Variables */
 :root {
   --main-color: #19c8f9;
+  --main-color-overlay: #19c8f98c;
   --main-color-text: #1f2021;
   --main-color-light: #777;
   --main-transition: 0.3s;

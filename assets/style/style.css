@@ -1,0 +1,91 @@
+/* Start Header */
+body {
+  background-color: #15182c;
+}
+.header {
+  .container {
+    min-height: 97.09px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    &::before {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 15px;
+      width: calc(100% - 30px);
+      height: 1px;
+      background-color: rgba(255, 255, 255, 0.514);
+    }
+    nav {
+      flex: 1;
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      color: white;
+      ul {
+        height: auto;
+        display: flex;
+        li a {
+          text-transform: uppercase;
+          font-size: 14px;
+          display: block;
+          color: white;
+          padding: 40px 20px;
+          border-bottom: 1px solid transparent;
+          transition: var(--main-transition);
+          &.active,
+          &:hover {
+            color: var(--main-color);
+            border-bottom: 1px solid var(--main-color);
+          }
+        }
+        @media only screen and (max-width: 992px) {
+          height: 0px;
+          overflow: hidden;
+          position: absolute;
+          top: 100%;
+          flex-direction: column;
+          width: calc(100% - 30px);
+          left: 15px;
+          background-color: rgba(0, 0, 0, 0.747);
+          li a {
+            padding: 20px 10px;
+          }
+          transition: var(--main-transition);
+        }
+      }
+      .toggle-menu {
+        margin-right: -20px;
+        cursor: pointer;
+        font-size: 20px;
+        transform: rotate(0deg);
+        transition: var(--main-transition);
+        @media only screen and (min-width: 993px) {
+          display: none;
+        }
+        &:hover {
+          color: var(--main-color);
+          transform: rotate(-90deg);
+        }
+      }
+      .search {
+        margin-left: 30px;
+        width: 30px;
+        height: 30px;
+        border-left: 1px solid white;
+        display: flex;
+        cursor: pointer;
+        justify-content: center;
+        align-items: center;
+        transition: var(--main-transition);
+        &:hover {
+          color: var(--main-color);
+          transform: rotate(-90deg);
+        }
+      }
+    }
+  }
+}
+/* End Header */
