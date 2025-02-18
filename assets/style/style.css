@@ -305,3 +305,67 @@
   }
 }
 /* End Services */
+
+/* Start Design */
+.design {
+  padding-block: var(--main-padding-block);
+  display: flex;
+  align-items: center;
+  height: 600px;
+  background-image: url("../img/landing-mobile-section.webp");
+  background-attachment: fixed;
+  background-size: cover;
+  overflow: hidden;
+  position: relative;
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #00000089;
+    width: 100%;
+    height: 100%;
+  }
+  .image,
+  .design-content {
+    z-index: 1;
+    flex: 1;
+  }
+  .image {
+    text-align: center;
+    img {
+      position: relative;
+      bottom: -120px;
+    }
+  }
+  .design-content {
+    padding: 50px;
+    background-color: var(--main-color-overlay);
+    color: white;
+    h2 {
+      font-weight: 500;
+      margin-bottom: 20px;
+    }
+    ul li {
+      padding-block: 10px;
+      position: relative;
+      &::before {
+        font-family: "Font Awesome 6 Free";
+        content: "\e163";
+        font-weight: 900;
+        margin-right: 15px;
+      }
+      transition: var(--main-transition);
+      &:hover {
+        color: black;
+      }
+    }
+  }
+  @media only screen and (max-width: 767px) {
+    height: initial;
+    .image {
+      display: none;
+    }
+  }
+}
+/* End Design */
